@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: cyan;
+        }
+        .title{
+            text-align: center;
+            border: solid black 2px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 496px;
+            height: 50px;
+            background-color: green;
+            font-size: 30px;
+            color: black;
+        }
+        input[type="button"]{
+            background-color: teal;
+            color: white;
+            border: solid black 2px;
+            width: 100%;
+            height: 100%;
+        }
+        input[type="text"]{
+            border: solid black 2px;
+            width: 98%;
+            height: 95%
+        }
+        #calculator-box{
+            background-color: green;
+            margin-left: 32%;
+            margin-top: 8%;
+            margin-right: 41.5%;
+            
+        }
+        table{
+            background-color: green;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calculator-box">
+    <div class="title">Math Calculator</div>
+    <table>
+        <tr>
+            <td colspan="3"><input type="text" id="result"></td>
+            <td><input type="button" value="C" onclick="clr()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="display('1')"></td>
+            <td><input type="button" value="2" onclick="display('2')"></td>
+            <td><input type="button" value="3" onclick="display('3')"></td>
+            <td><input type="button" value="/" onclick="display('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="display('4')"></td>
+            <td><input type="button" value="5" onclick="display('5')"></td>
+            <td><input type="button" value="6" onclick="display('6')"></td>
+            <td><input type="button" value="+" onclick="display('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="display('7')"></td>
+            <td><input type="button" value="8" onclick="display('8')"></td>
+            <td><input type="button" value="9" onclick="display('9')"></td>
+            <td><input type="button" value="-" onclick="display('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="." onclick="display('.')"></td>
+            <td><input type="button" value="0" onclick="display('0')"></td>
+            <td><input type="button" value="=" onclick="equate()"></td>
+            <td><input type="button" value="*" onclick="display('*')"></td>
+        </tr>
+    </table>
+    </div>
+    <script>
+        // use clr for clear function
+        function clr(){
+            document.getElementById('result').value = "";
+        }
+        function display(val){
+            document.getElementById("result").value += val;
+        }
+        function equate(){
+            let x = document.getElementById('result').value;
+            let y;
+            try {
+            y = eval(x);
+            document.getElementById('result').value = y;
+            } catch (error) {
+            document.getElementById('result').value = 'SYNTAX ERROR';
+            }
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+heading{
+    font-size: 30px;
+    color: green;
+}
+
+department, computer, electrical, info, name, emp_id, age, salary{
+    display: block;
+    color: blue;
+    font-size: 20px;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="employees.xsl" ?>
+<!-- <!DOCTYPE employees SYSTEM "employees.dtd"> -->
+
+<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="employees.xsd">
+    <department>
+        <name>Joseph Martin</name>
+        <emp_id>123</emp_id>
+        <age>20</age>
+        <salary>100000</salary>
+    </department>
+    <department>
+        <name>Akash</name>
+        <emp_id>45</emp_id>
+        <age>21</age>
+        <salary>120000</salary>
+    </department>
+    <department>
+        <name>Akshay</name>
+        <emp_id>121</emp_id>
+        <age>23</age>
+        <salary>12300</salary>
+    </department>
+</employees>
